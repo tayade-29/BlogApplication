@@ -1,11 +1,10 @@
-const API_URL = "https://blogapplication-apb0.onrender.com"; // Use the variable you set in Vercel
-
+const API_URL = "https://blogapplication-apb0.onrender.com"; // Backend URL
 
 export const apiService = {
   // Auth endpoints
   async signup(formData) {
     try {
-      const response = await fetch("https://blogapplication-apb0.onrender.com/api/auth/signup", {
+      const response = await fetch(`${API_URL}/api/auth/signup`, {
         method: 'POST',
         body: formData, // Use FormData for file uploads
       });
@@ -26,7 +25,7 @@ export const apiService = {
 
   async login(credentials) {
     try {
-      const response = await fetch("https://blogapplication-apb0.onrender.com/api/auth/login", {
+      const response = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +52,7 @@ export const apiService = {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Authentication token not found');
 
-      const response = await fetch("https://blogapplication-apb0.onrender.com/api/users/profile", {
+      const response = await fetch(`${API_URL}/api/users/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -78,7 +77,7 @@ export const postService = {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Authentication token not found');
 
-      const response = await fetch("https://blogapplication-apb0.onrender.com/api/posts", {
+      const response = await fetch(`${API_URL}/api/posts`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -100,7 +99,7 @@ export const postService = {
 
   async getAllPosts() {
     try {
-      const response = await fetch("https://blogapplication-apb0.onrender.com/api/posts");
+      const response = await fetch(`${API_URL}/api/posts`);
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Failed to fetch posts');
@@ -114,7 +113,7 @@ export const postService = {
 
   async getPostById(id) {
     try {
-      const response = await fetch("https://blogapplication-apb0.onrender.com/api/posts/${id}");
+      const response = await fetch(`${API_URL}/api/posts/${id}`);
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Failed to fetch post');
