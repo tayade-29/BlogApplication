@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://blog-application-frontend-vert.vercel.app/', // Replace with your frontend URL in production
+  origin: process.env.CLIENT_URL || 'https://blog-application-frontend-vert.vercel.app/', // Adjust for your frontend URL in production
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, // Allow cookies if needed
 }));
@@ -32,17 +32,16 @@ app.get('/', (req, res) => {
   `);
 });
 
-// Serve React build folder (for full-stack deployment)
+// // Serve React build folder (for full-stack deployment)
 // if (process.env.NODE_ENV === 'production') {
-//   // Serve React build folder (make sure to point to the correct folder)
-//   app.use(express.static(path.join(__dirname, '../frontend/dist')));
+//   // Serve React build folder
+//   app.use(express.static(path.join(__dirname, '../frontend/dist'))); // Correct path to dist folder
 
 //   // Catch-all route to send index.html for all other requests
 //   app.get('*', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 //   });
 // }
-
 
 // Error handling middleware
 app.use((err, req, res, next) => {
