@@ -1,4 +1,5 @@
-const API_URL = 'https://blogapplication-apb0.onrender.com/api'; // Ensure this matches your backend's base URL
+const API_URL = process.env.NEXT_PUBLIC_API_URL; // Use the variable you set in Vercel
+
 
 export const apiService = {
   // Auth endpoints
