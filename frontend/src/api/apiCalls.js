@@ -1,4 +1,4 @@
-const API_URL = "https://blogapplication-apb0.onrender.com"; // Backend URL
+const API_URL = "https://blogapplication-uuha.onrender.com"; // Backend URL
 
 export const apiService = {
   // Auth endpoints
