@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || '*', // Replace with your frontend URL in production
+  origin: process.env.CLIENT_URL || 'https://blog-application-frontend-two.vercel.app', // Replace with your frontend URL in production
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, // Allow cookies if needed
 }));
