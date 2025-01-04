@@ -36,7 +36,7 @@ const ProfilePage = () => {
           <div className="profile-image-box">
             {user?.profilePhoto ? (
               <img
-                src={`http://localhost:3000/${user.profilePhoto}`} // Ensure backend serves image
+                src={`https://blogapplication-apb0.onrender.com/${user.profilePhoto}`} // Ensure backend serves image
                 alt="Profile"
                 className="profile-image"
               />

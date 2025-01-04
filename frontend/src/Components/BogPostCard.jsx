@@ -7,7 +7,7 @@ export const BogPostCard = ({ title, postImage, id }) => {
     <div className="blog-post-card">
       <div className="blog-image-container">
         <img
-          src={`http://localhost:3000/${postImage}`} // Updated URL
+          src={`https://blogapplication-apb0.onrender.com/${postImage}`} // Updated URL
           alt={title}
           className="blog-image"
         />

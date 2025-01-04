@@ -34,7 +34,7 @@ export const PostPage = () => {
     <div className="post-page">
       <div className="post-header-image">
         <img
-          src={`http://localhost:3000/${post.backgroundImage}`}
+          src={`https://blogapplication-apb0.onrender.com/${post.backgroundImage}`}
           alt={post.title}
           className="post-header-image"
         />
@@ -47,7 +47,7 @@ export const PostPage = () => {
       <div className="post-main-content">
         <div className="post-side-image">
           <img
-            src={`http://localhost:3000/${post.postImage}`}
+            src={`https://blogapplication-apb0.onrender.com/${post.postImage}`}
             alt="Blog Content"
             className="post-side-image"
           />

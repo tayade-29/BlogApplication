@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Base URL for your API
-const API_URL = "http://localhost:5000"; // Replace with your backend API URL
+const API_URL = "https://blogapplication-apb0.onrender.com"; // Replace with your backend API URL
 
 const api = axios.create({
   baseURL: API_URL,

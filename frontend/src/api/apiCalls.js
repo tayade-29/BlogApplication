@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api'; // Ensure this matches your backend's base URL
+const API_URL = 'https://blogapplication-apb0.onrender.com/api'; // Ensure this matches your backend's base URL
 
 export const apiService = {
   // Auth endpoints
