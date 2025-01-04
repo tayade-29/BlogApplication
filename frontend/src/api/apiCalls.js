@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL; // Use the variable you set in Vercel
+const API_URL = "https://blogapplication-apb0.onrender.com"; // Use the variable you set in Vercel
 
 
 export const apiService = {
@@ -26,7 +26,7 @@ export const apiService = {
 
   async login(credentials) {
     try {
-      const response = await fetch("$https://blogapplication-apb0.onrender.com/api/auth/login", {
+      const response = await fetch("https://blogapplication-apb0.onrender.com/api/auth/login", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
