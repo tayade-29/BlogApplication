@@ -1,0 +1,27 @@
+/* Home.css */
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:760px; /* Adjusts height to fit the viewport */
+    background-color: #212A31;
+    color: #D3D9D4;
+    padding-top: 100px; /* Adjusts the gap between navbar and text */
+    padding-bottom: 0px;
+    
+}
+
+.home-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin: 0.5rem 0;
+}
+@media (max-width: 768px) {
+    .home-text {
+      font-size: 28px;
+    }
+}

@@ -1,0 +1,47 @@
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items to the bottom */
+    height: 500px; /* Height of the section */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Allow absolute positioning of children */
+}
+
+.themes-animation-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 350px; /* Container height */
+}
+
+.theme-image-wrapper {
+    position: relative; /* Allows layering effect */
+    width: 15%; /* Width of each image wrapper */
+    height: 300px; /* Fixed height for all images */
+    margin: 0 10px; /* Space between images horizontally */
+    transform: translateY(calc(var(--offset, 0) * -10px)); /* Offset each wrapper by 10px */
+    transition: transform 0.8s ease, scale 0.3s ease-in-out; /* Smooth transition for appearance and hover scaling */
+}
+
+/* Custom offset for each image wrapper */
+.theme-image-wrapper:nth-child(1) { --offset: 0; }
+.theme-image-wrapper:nth-child(2) { --offset: 1; }
+.theme-image-wrapper:nth-child(3) { --offset: 0; }
+.theme-image-wrapper:nth-child(4) { --offset: 1; }
+.theme-image-wrapper:nth-child(5) { --offset: 0; }
+.theme-image-wrapper:nth-child(6) { --offset: 1; }
+
+.theme-image-wrapper:hover {
+    transform: scale(1.1) translateY(calc(var(--offset, 0) * -10px)); /* Scale on hover */
+    z-index: 1; /* Bring hovered image to the front */
+}
+
+.theme-image {
+    width: 100%; /* Ensure the image fits within its wrapper */
+    height: 100%; /* Ensure the image covers the height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}

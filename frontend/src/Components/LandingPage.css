@@ -1,0 +1,89 @@
+/* General layout for the landing page */
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  background:#212A31;
+  overflow: hidden;
+  padding: 0 5%;
+}
+
+/* Left Content */
+.left-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 2rem;
+}
+
+.quote-container {
+  text-align: left;
+  position: relative;
+}
+
+/* Quote Animation */
+.quote {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #D3D9D4;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 3s ease-in-out forwards; /* Animates appearance */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Get Started Button Animation */
+.get-started-button {
+  background-color: #212A31;
+  color: #D3D9D4;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Positioned slightly lower */
+  animation: fadeInButton 2s ease-in-out forwards;
+  animation-delay: 3s; /* Delays the button animation until after the quote */
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Right Content */
+.right-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inspiration-image {
+  max-width: 80%;
+  max-height: 80%;
+  
+}

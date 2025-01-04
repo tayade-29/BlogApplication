@@ -1,0 +1,128 @@
+/* Overall post page container */
+.post-page {
+  background: #212A31;
+  margin-top: 50px;
+  color: #D3D9D4;
+  line-height: 1.6;
+  width: 100%;
+  min-height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Full-width image at the top */
+.post-header-image {
+  width: 100%; /* Ensures the container spans the full width */
+  overflow: hidden; /* Hides any overflow content */
+  margin-bottom: 20px;
+}
+
+.post-header-image img {
+  width: 100vw; /* Full width of the viewport */
+  height: 25vh; /* 25% of the viewport height */
+  object-fit: cover; /* Ensures the image scales and crops to fit */
+  display: block; /* Removes any inline space around the image */
+}
+
+
+/* Title styling */
+.post-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.post-title h1 {
+  font-size: 2rem;
+  color: #D3D9D4;
+}
+
+/* Main content section (split layout) */
+.post-main-content {
+  display: flex;
+  align-items: center; /* Vertically align image and content */
+  gap: 30px; /* 30px gap between image and content */
+  width: 80%; /* Adjust width to fit within the page */
+  margin: 0 auto; /* Center align the main content horizontally */
+}
+
+/* Left-side image styling */
+.post-side-image {
+  flex: 0 0 40%; /* Take 40% of the width */
+  display: flex;
+  justify-content: flex-start; /* Align image to the left */
+}
+
+.post-side-image img {
+  width: 100%;
+  max-width: 400px; /* Maximum width of the image */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Right-side content styling */
+.post-content {
+  flex: 1; /* Take remaining space */
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/* Author section */
+.post-author {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #D3D9D4;
+}
+
+.post-author strong {
+  color: #D3D9D4;
+}
+
+/* Floating "+" Button */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #D3D9D4;
+  color: #212A31;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  background-color: #d3d9d4c7;
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .post-main-content {
+    flex-direction: column; /* Stack image and content vertically on small screens */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .post-side-image {
+    flex: none;
+    width: 100%;
+    max-width: 300px; /* Limit the image width on small screens */
+  }
+
+  .post-content {
+    flex: none;
+    width: 100%;
+    text-align: justify;
+  }
+}

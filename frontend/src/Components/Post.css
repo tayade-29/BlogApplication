@@ -1,0 +1,158 @@
+/* Main container styling */
+.main-container {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.explore-section {
+  margin-bottom: 30px; /* Creates gap between sections */
+}
+
+.explore-heading {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+}
+
+.changing-text {
+  font-weight: bold;
+  color: #ff5722;
+}
+
+/* Wrapper for image and text */
+.post-content-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the Post Text */
+.post-text-container {
+  width: 700px;
+  height: 400px;
+  flex: 1;
+  padding: 20px;
+  padding-left: 30px;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.post-date {
+  font-size: 0.9em;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.post-content {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
+  color: #000000;
+}
+
+.post-link {
+  margin-top: 10px;
+  color: #3c6395;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Styling for the Post Image */
+.post-image-container {
+  position: absolute;
+  top: 50%; /* Centers the image container vertically */
+  left: -220px; /* Adjust to place the image container in the left center */
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  transform: translateY(-50%); /* Ensures the image container is vertically centered */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images maintain consistent size and aspect ratio */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .post-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .post-text-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .post-title {
+    font-size: 1.5em;
+  }
+
+  .post-date,
+  .post-content {
+    font-size: 0.9em;
+  }
+
+  .post-image-container {
+    position: static;
+    width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+    transform: none;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-heading {
+    font-size: 1.5em;
+  }
+
+  .post-title {
+    font-size: 1.3em;
+  }
+
+  .post-content {
+    font-size: 0.9em;
+  }
+
+  .post-content-wrapper {
+    padding: 10px;
+  }
+
+  .post-image-container {
+    width: 100%;
+  }
+}
+

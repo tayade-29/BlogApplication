@@ -1,0 +1,121 @@
+/* Container for the entire explore page */
+.explore-container {
+  background: #212A31;
+  width:100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* Search bar container */
+.search-bar-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 500px;
+  height: 30px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #748D92;
+}
+
+.search-button {
+  width: 50px;
+  height: 30px;
+  background-color: #212A31;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+  color: #D3D9D4;
+  border: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #212A31;
+}
+
+/* Page Title */
+.page-title {
+  color: #D3D9D4;
+  margin-top: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures responsive card layout */
+  gap: 20px; /* Sets 10px spacing between cards */
+}
+
+.blog-grid .blog-card {
+  width: 300px; /* Fixed width for each blog card */
+  height: 400px; /* Fixed height for each blog card */
+}
+
+
+/* Floating "+" Button */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #D3D9D4;
+  color: #212A31;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  background-color: #d3d9d4c7;
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-input {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .search-button{
+    margin-top: 50px;
+  }
+
+  .floating-button {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.2rem;
+  }
+}

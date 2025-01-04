@@ -1,0 +1,131 @@
+/* Page container for centering the form */
+.page-container {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: #212A31;
+  color: #212A31;
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+}
+
+/* Form container */
+.form-container {
+    margin-top: 100px;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 600px; /* Limit the maximum width for a compact form */
+    background-color: #D3D9D4; /* White background for the form */
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    border-radius: 10px; /* Smooth rounded corners */
+    color: #000000; /* Text color */
+}
+
+/* Title Styling */
+.form-container h1 {
+    text-align: center;
+    color: #212A31;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Input group container */
+.form-container .input-group {
+    margin-bottom: 16px;
+}
+
+/* Label styling */
+.form-container label {
+    height: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    color: #212A31;
+}
+
+/* Input and textarea styling */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    height: 30px;
+    padding: 10px; /* Slightly reduced padding for smaller height */
+    font-size: 0.95rem; /* Adjusted font size for compact inputs */
+    border-radius: 6px;
+    color: #212A31;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Light input background */
+    transition: border-color 0.3s ease; /* Smooth hover effect */
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #212A31; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Textarea resize */
+.form-container textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 100px; /* Default height for the textarea */
+}
+
+/* Submit button styling */
+.form-container button.submit-btn {
+    background-color: #212A31; /* Bright blue for a bold call-to-action */
+    color: white;
+    border: none;
+    padding: 10px 16px; /* Compact button padding */
+    font-size: 1rem; /* Adjusted button font size */
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.form-container button.submit-btn:hover {
+    background-color: #212a31b8; /* Slightly darker blue on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .form-container h1 {
+        font-size: 1.6rem; /* Slightly smaller title */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 0.9rem; /* Adjust input size */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .form-container button.submit-btn {
+        font-size: 0.95rem; /* Adjust button size */
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px; /* Further reduce padding for very small screens */
+    }
+
+    .form-container h1 {
+        font-size: 1.4rem; /* Smaller title */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 0.85rem; /* Adjust input size */
+        padding: 6px; /* Further reduce padding */
+    }
+
+    .form-container button.submit-btn {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 6px 10px;
+    }
+}

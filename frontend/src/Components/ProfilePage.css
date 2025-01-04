@@ -1,0 +1,151 @@
+/* Overall container */
+.profile-page {
+  height: 100vh;
+  background: #212A31;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything horizontally */
+  gap: 20px;
+}
+
+/* Top Section: Profile Info */
+.profile-top {
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Full width of the page */
+  max-width: 1200px; /* Restrict maximum width */
+}
+
+/* Left Side: Profile Image */
+.profile-left {
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  border-radius: 10px;
+}
+
+.profile-image-box {
+  text-align: center;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+/* Right Side: Profile Details */
+.profile-right {
+  flex: 2;
+  max-width: 700px;
+  background-color: #D3D9D4;
+
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.profile-table {
+  border-collapse: collapse;
+}
+
+.profile-table td {
+  padding: 10px;
+  border-bottom: 1px solid #D3D9D4;
+}
+
+.profile-table td:first-child {
+  font-weight: bold;
+  width: 30%;
+}
+
+/* Bottom Section: Dashboard */
+.profile-dashboard {
+  margin-top: 30px;
+  width: 100%; /* Full width of the page */
+  max-width: 800px; /* Restrict maximum width */
+  display: flex;
+  flex-direction: column; /* Stack content inside */
+  align-items: center; /* Center the dashboard horizontally */
+  border-radius: 10px;
+  /* Transparent white with 50% opacity */
+background-color: #D3D9D4;
+   
+  padding: 20px;
+}
+
+.dashboard-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.dashboard-item {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-item.active {
+  background-color: #212a3178;
+  transform: scale(1.05);
+}
+
+.dashboard-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.dashboard-item p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dashboard-blogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the blog cards horizontally */
+  width: 100%;
+}
+
+.blog-card {
+  font-size: 12px;
+  font-style: bold;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: 300px; /* Set a max width for the cards */
+  background: #212a3178;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-top {
+    margin-top: 150px;
+    flex-direction: column; /* Stack the profile and details vertically */
+    align-items: center; /* Center-align on small screens */
+  }
+
+  .dashboard-blogs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
