@@ -34,12 +34,15 @@ app.get('/', (req, res) => {
 
 // Serve React build folder (for full-stack deployment)
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'frontend/dist')));
+  // Serve React build folder (make sure to point to the correct folder)
+  app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
+  // Catch-all route to send index.html for all other requests
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/dist', 'index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
   });
 }
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {
