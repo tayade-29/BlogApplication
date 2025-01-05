@@ -24,6 +24,7 @@ export const apiService = {
   },
 
   async login(credentials) {
+    console.log('Login API called with:', credentials); // Debug logging
     try {
       const response = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
@@ -32,20 +33,23 @@ export const apiService = {
         },
         body: JSON.stringify(credentials),
       });
-
+  
+      console.log('API Response:', response); // Debug response
+  
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Login failed');
       }
-
+  
       const data = await response.json();
-      localStorage.setItem('token', data.token); // Store token for auth
+      localStorage.setItem('token', data.token);
       return data;
     } catch (error) {
       console.error('Login Error:', error.message);
       throw error;
     }
   },
+  
 
   async getProfile() {
     try {

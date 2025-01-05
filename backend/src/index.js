@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://blog-application-frontend-vert.vercel.app/', // Adjust for your frontend URL in production
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, // Allow cookies if needed
 }));
